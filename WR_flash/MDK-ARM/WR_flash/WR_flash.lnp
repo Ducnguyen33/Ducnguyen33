@@ -1,0 +1,23 @@
+--cpu Cortex-M3
+"wr_flash\startup_stm32f103xb.o"
+"wr_flash\main.o"
+"wr_flash\stm32f1xx_it.o"
+"wr_flash\stm32f1xx_hal_msp.o"
+"wr_flash\stm32f1xx_hal_gpio_ex.o"
+"wr_flash\stm32f1xx_hal_tim.o"
+"wr_flash\stm32f1xx_hal_tim_ex.o"
+"wr_flash\stm32f1xx_hal.o"
+"wr_flash\stm32f1xx_hal_rcc.o"
+"wr_flash\stm32f1xx_hal_rcc_ex.o"
+"wr_flash\stm32f1xx_hal_gpio.o"
+"wr_flash\stm32f1xx_hal_dma.o"
+"wr_flash\stm32f1xx_hal_cortex.o"
+"wr_flash\stm32f1xx_hal_pwr.o"
+"wr_flash\stm32f1xx_hal_flash.o"
+"wr_flash\stm32f1xx_hal_flash_ex.o"
+"wr_flash\stm32f1xx_hal_exti.o"
+"wr_flash\system_stm32f1xx.o"
+--strict --scatter "WR_flash\WR_flash.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "WR_flash.map" -o WR_flash\WR_flash.axf
